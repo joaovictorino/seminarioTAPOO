@@ -1,0 +1,23 @@
+@page
+@model Models.NotaModel
+
+@{ ViewBag.Title = "Todas as Anotações";}
+<h2>@ViewBag.Title</h2>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Titulo</th>
+    @if(Model != null && Model.Notas != null){
+        foreach (var item in Model.Notas)
+        {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+                @item.Name
+            </td>
+        </tr>
+        }
+    }
+</table>
