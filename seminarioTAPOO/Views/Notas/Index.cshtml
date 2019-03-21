@@ -1,14 +1,15 @@
-@page
-@model Models.NotaModel
+﻿@model IEnumerable<Models.Nota>
 
 @{ ViewBag.Title = "Todas as Anotações";}
+
 <h2>@ViewBag.Title</h2>
 <table class="table">
     <tr>
         <th>ID</th>
         <th>Titulo</th>
-    @if(Model != null && Model.Notas != null){
-        foreach (var item in Model.Notas)
+    @if(Model != null)
+    {
+        @foreach (var item in Model)
         {
         <tr>
             <td>

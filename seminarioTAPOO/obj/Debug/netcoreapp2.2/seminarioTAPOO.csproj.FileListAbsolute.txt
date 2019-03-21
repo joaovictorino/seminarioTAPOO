@@ -28,4 +28,4 @@
 /home/joao/Repos/seminarioTAPOO/seminarioTAPOO/obj/Debug/netcoreapp2.2/seminarioTAPOO.dll
 /home/joao/Repos/seminarioTAPOO/seminarioTAPOO/obj/Debug/netcoreapp2.2/seminarioTAPOO.pdb
 /home/joao/Repos/seminarioTAPOO/seminarioTAPOO/obj/Debug/netcoreapp2.2/seminarioTAPOO.csproj.CopyComplete
-/home/joao/Repos/seminarioTAPOO/seminarioTAPOO/obj/Debug/netcoreapp2.2/Razor/Pages/Notas.g.cshtml.cs
+/home/joao/Repos/seminarioTAPOO/seminarioTAPOO/obj/Debug/netcoreapp2.2/Razor/Views/Notas/Index.g.cshtml.cs
