@@ -13011,11 +13011,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/joao/Repos/seminarioTAPOO/seminarioTAPOO/seminarioTAPOO.csproj",
+      "projectUniqueName": "/home/joao/Repos/seminarioTAPOO/seminarioTAPOO.csproj",
       "projectName": "seminarioTAPOO",
-      "projectPath": "/home/joao/Repos/seminarioTAPOO/seminarioTAPOO/seminarioTAPOO.csproj",
+      "projectPath": "/home/joao/Repos/seminarioTAPOO/seminarioTAPOO.csproj",
       "packagesPath": "/home/joao/.nuget/packages/",
-      "outputPath": "/home/joao/Repos/seminarioTAPOO/seminarioTAPOO/obj/",
+      "outputPath": "/home/joao/Repos/seminarioTAPOO/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
