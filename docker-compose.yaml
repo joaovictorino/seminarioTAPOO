@@ -2,23 +2,21 @@ version: '3'
 
 services:
   siteseminario:
-    image: seminariotapoo
     build:
       context: .
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
     ports:
       - "5000:80"
-    networks:
-      - seminario-network
+    links:
+      - mongo
     depends_on:
-      - "mongoseminario"
+      - "mongo"
 
-  mongoseminario:
+  mongo:
+    container_name: mongo
     image: mongo
     ports:
-      - "17017:27017"
-    networks:
-      - seminario-network
-
-networks: 
-    seminario-network:
-        driver: bridge
+      - "27017:27017"
