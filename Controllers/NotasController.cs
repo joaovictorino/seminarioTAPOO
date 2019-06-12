@@ -12,12 +12,20 @@ namespace Controllers
         public IActionResult Index()
         {
             MongoDbContext dbContext = new MongoDbContext();
-            Nota entity = new Nota();
-            entity.Name = "teste";
-            dbContext.Notas.InsertOne(entity);
-
             List<Nota> listaNotas = dbContext.Notas.Find(m => true).ToList();
             return View(listaNotas);
+        }
+
+        public IActionResult Inserir()
+        {
+            MongoDbContext dbContext = new MongoDbContext();
+            Nota entity = new Nota();
+            entity.Name = "teste";
+            Teste t = new Teste();
+            t.Name = "bla";
+            entity.Valor = t;
+            dbContext.Notas.InsertOne(entity);
+            return Content("OK");
         }
     }
 }

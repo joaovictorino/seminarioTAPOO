@@ -12,5 +12,8 @@ namespace Models
 
         [BsonElement("Name")]
         public string Name { get; set; }
+
+        [BsonElement("Valor")]
+        public Teste Valor { get; set; }
     }
 }
