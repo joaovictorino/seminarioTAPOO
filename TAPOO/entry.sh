@@ -1,3 +1,5 @@
 #!/bin/bash
 
-dotnet $1 + ".dll"
+NOME="$PROJETO.dll"
+
+dotnet $NOME
