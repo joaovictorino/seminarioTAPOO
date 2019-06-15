@@ -8,15 +8,17 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
+      - PROJETO=${PROJETO}
     ports:
       - "5000:80"
     links:
-      - mongo
+      - mongoteste
     depends_on:
-      - "mongo"
+      - "mongoteste"
 
-  mongo:
-    container_name: mongo
+  mongoteste:
     image: mongo
+    volumes:
+      - '../data:/data/db'
     ports:
       - "27017:27017"

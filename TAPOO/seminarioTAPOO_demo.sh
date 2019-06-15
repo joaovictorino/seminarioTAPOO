@@ -1,13 +1,16 @@
 #!/bin/bash
 
-dotnet new webapp -o $1
+dotnet new webapp -o $1 --force
 
 cp Dockerfile $1
-#sed -i s/PROJETO/$1/g $1/Dockerfile
+cp docker-compose.yaml $1
 cp entry.sh $1
+cp -rf codigo/* $1
 
 cd $1
 
-docker build --build-arg PROJETO=$1 -t $1 .
+export PROJETO=$1
 
-docker run -it --rm -e PROJETO=$1 -p 5000:80 --name $1_sample $1
+dotnet add package MongoDb.Driver
+
+docker-compose up --build -d
